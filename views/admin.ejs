@@ -1,0 +1,75 @@
+<%- include('partials/header') %>
+
+    <div class="container">
+        <div class="jumbotron centered">
+            
+            <i class="fas fa-key fa-6x"></i>
+            <a href="/logout" class="btn btn-light btn-lg" role="button">Log Out</a>
+            <h1 class="display-3">Resume</h1>
+            <p class="secret-text">Edit your resume</p>
+
+            <form action="/admin" method="POST"enctype="multipart/form-data">
+                <h2>Personal information</h2>
+                <div class="form-group">
+                    <p>Full name</p><input type="text" class="form-control text-center" name="fullName" value="<%= myResume[0].fullName %>">
+                </div>
+                <div class="form-group">
+                    <p>Date of birth</p><input type="date" class="form-control text-center" name="dateOfBirth" value="<%= myResume[0].dateOfBirth %>">
+                </div>
+                <div class="form-group">
+                    <p>Place of residence</p><input type="text" class="form-control text-center" name="residence" value="<%= myResume[0].residence %>">
+                </div>
+                <div class="form-group">
+                    <p>Occupation</p><input type="text" class="form-control text-center" name="occupation" value="<%= myResume[0].occupation %>">
+                </div>
+                <div class="form-group">
+                    <p>Introduction</p><input type="text" class="form-control text-center" name="introduction" value="<%= myResume[0].introduction %>">
+                </div>
+                <div class="form-group">
+                <p>Picture</p><input type="file" name="userFile" value="<%= myResume[0].image %>">
+            </div>
+                <h2>Contacts</h2>
+                <div class="form-group">
+                    <p>Phone number</p><input type="text" class="form-control text-center" name="phoneNumber" value="<%= myResume[0].phoneNumber %>">
+                </div>
+                <div class="form-group">
+                    <p>Email</p><input type="text" class="form-control text-center" name="email" value="<%= myResume[0].email %>">
+                </div>
+                <div class="form-group">
+                    <p>Facebook</p><input type="text" class="form-control text-center" name="facebook" value="<%= myResume[0].facebook %>">
+                </div>
+                <div class="form-group">
+                    <p>Twitter</p><input type="text" class="form-control text-center" name="twitter" value="<%= myResume[0].twitter %>">
+                </div>
+                <div class="form-group">
+                    <p>Instagram</p><input type="text" class="form-control text-center" name="instagram" value="<%= myResume[0].instagram %>">
+                </div>
+                <h2>Education</h2>
+                <div class="form-group">
+                    <p>School (1)</p><input type="text" class="form-control text-center" name="school1" value="<%= myResume[0].school1 %>">
+                    <p>Date of graduation (1)</p><input type="date"class="form-control text-center" name="graduationDate1" value="<%= myResume[0].graduationDate1 %>">
+                </div>
+                <div class="form-group">
+                    <p>School (2)</p><input type="text" class="form-control text-center" name="school2" value="<%= myResume[0].school2 %>">
+                    <p>Date of graduation (2)</p><input type="date"class="form-control text-center" name="graduationDate2" value="<%= myResume[0].graduationDate2 %>">
+                </div>
+                <div class="form-group">
+                    <p>School (3)</p><input type="text" class="form-control text-center" name="school3" value="<%= myResume[0].school3 %>">
+                    <p>Date of graduation (3)</p><input type="date"class="form-control text-center" name="graduationDate3" value="<%= myResume[0].graduationDate3 %>">
+                </div>
+                <h2>Technical skills</h2>
+                <div class="form-group">
+                    <input type="text" class="form-control text-center" name="technicalSkills" value="<%= myResume[0].technicalSkills %>">
+                </div>
+                <h2>Soft skills</h2>
+                <div class="form-group">
+                    <input type="text" class="form-control text-center" name="softSkills" value="<%= myResume[0].softSkills %>">
+                </div>
+                
+                <button type="submit" class="btn btn-dark">Submit</button>
+
+            </form>
+            </div>
+        </div>
+    </div>
+<%- include('partials/footer') %>
